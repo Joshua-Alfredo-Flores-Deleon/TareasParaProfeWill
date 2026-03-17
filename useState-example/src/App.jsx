@@ -61,6 +61,7 @@ function App() {
     }
   }
 
+  //Eliminar la tarea
   const eliminarTarea = (index) => {
     const nuevasTareas = [...tareas];
     nuevasTareas.splice(index, 1);
@@ -125,14 +126,12 @@ function App() {
 
        <hr />
 
-      <Boton label="Eliminar tarea"
-       onClick={eliminarTarea}/>
-
+   
       <h2>Lista de tareas:</h2>
       <ul>
         {tareas.map((tarea, index) => (
-          <li key={index}>{tarea}</li>
-          
+          <li key={index}>{tarea}<Boton label="Eliminar Tarea"
+          onClick={eliminarTarea}/></li>
         ))}
       </ul>
 
