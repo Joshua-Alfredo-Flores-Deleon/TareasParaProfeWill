@@ -123,12 +123,16 @@ function App() {
       <Boton label="Agregar tarea"
        onClick={agregarTarea}/>
 
+       <hr />
 
+      <Boton label="Eliminar tarea"
+       onClick={eliminarTarea}/>
 
       <h2>Lista de tareas:</h2>
       <ul>
         {tareas.map((tarea, index) => (
           <li key={index}>{tarea}</li>
+          
         ))}
       </ul>
 
